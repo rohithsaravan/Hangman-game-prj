@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hangman Game</title>
+</head>
+    <body>
+        <h1><mark>WELCOME TO THE HANGMAN  GAME</mark></h1>
+        <h3></h3>
+        <div id="hangm">
+            <p>Click this Button To Start the Game</p>
+            <h2>👇</h2>
+            <div class="col-sm-3">
+                <button type="button" id="btn-start" class="btn-lg btn-info" onclick="Hangman.reset(); return false;" >START GAME</button>
+            <br><br>
+            </div>
+                <div id="hangm_animation">
+                    <div id="hangm_2" class="h pole_h"></div>
+                    <div id="hangm_1" class="h pole_v"></div>
+                    <div id="hangm_3" class="h rope"></div>
+                    <div id="hangm_4" class="h man_head"></div>
+                    <div id="hangm_5" class="h man_upper"></div>
+                    <div id="hangm_6" class="h man_lower"></div>
+                </div>
+
+                <div style="height: 2em;">
+                    <div id="hangm_guesses" class="h"></div>
+                </div>
+                
+                <form>
+                    
+                    <div id="hangm_guessbox" style="height: 8em;" class="h"><h4 id="clue">CLUE:FRUIT NAME</h4>
+                        <div style="height: 4em;">
+                            Guess the word:<div id="hangm_word"></div>
+                        </div>
+                        <input id="guess" onkeyup="Hangman.guess(this.value); this.value=''; return false;" type="text" placeholder="">
+                    </div>
+                    <div style="height: 2em; margin-bottom: 3em;">
+                        <div id="hangm_end" class="h"></div>
+                    </div>
+                </form>
+
+        </div>
+    <script src="javascript.js"></script>
+    </body>
+</html>
